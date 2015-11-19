@@ -20,7 +20,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yFa-TK-i5n">
                                 <rect key="frame" x="242" y="192" width="117" height="216"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="A ♠︎" backgroundImage="cardfront">
+                                <state key="normal" title="A ♠︎" backgroundImage="cardback">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
@@ -46,6 +46,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="cardfront" width="234" height="432"/>
+        <image name="cardback" width="648" height="864"/>
     </resources>
 </document>

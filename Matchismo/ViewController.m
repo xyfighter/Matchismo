@@ -13,10 +13,23 @@
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *countLabel;
 @property (nonatomic) NSInteger count;
+@property (strong, nonatomic) Deck* deck;
 
 @end
 
 @implementation ViewController
+
+-(Deck* ) deck{
+    if (_deck == nil) {
+        _deck = [self createPlayingDeck];
+    }
+    return _deck;
+}
+
+-( Deck* ) createPlayingDeck
+{
+    return [[PlayingDeck alloc]init];
+}
 
 -(void) setCount:(NSInteger)count
 {
@@ -28,17 +41,21 @@
     if ([sender.currentTitle length]) {
         [sender setBackgroundImage: [UIImage imageNamed:@"cardback.jpg"] forState:UIControlStateNormal];
         [sender setTitle:@"" forState:UIControlStateNormal];
+        self.count++;
+
     }
     else
     {
-        PlayingDeck * deck = [[PlayingDeck alloc]init];
-        Card * card = [deck drawRandomCard];
-        [sender setBackgroundImage:[UIImage imageNamed:@"cardfront"]
+        Card * card = [self.deck drawRandomCard];
+        if (card) {
+            [sender setBackgroundImage:[UIImage imageNamed:@"cardfront"]
                           forState:UIControlStateNormal];
-        [sender setTitle:[card contents] forState:UIControlStateNormal];
+            [sender setTitle:card.contents forState:UIControlStateNormal];
+            self.count++;
+
+        }
     }
     
-    self.count++;
 
 }
 
