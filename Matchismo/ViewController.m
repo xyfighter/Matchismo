@@ -14,14 +14,12 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+- (IBAction)touchCardButton:(UIButton *)sender {
+    
+    [sender setBackgroundImage: [UIImage imageNamed:@"cardback.jpg"] forState:UIControlStateNormal];
+    [sender setTitle:@"" forState:UIControlStateNormal];
+
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 @end
