@@ -29,7 +29,7 @@
 }
 
 -(void) setRank:(NSInteger)rank{
-    if (rank < [PlayingCard MaxRank]) {
+    if (rank <= [PlayingCard MaxRank]) {
         _rank = rank;
     }
 }
@@ -39,10 +39,10 @@
 }
 
 +(NSArray *)ValidSuits{
-    return @[@"♠︎",@"♣︎",@"♥︎",@"♦︎"];
+    return @[@"♠️",@"♣️",@"♥️",@"♦️"];
 }
 
 +(NSInteger) MaxRank{
-    return [[PlayingCard RankStrings] count]-1;
+    return [[PlayingCard RankStrings] count];
 }
 @end

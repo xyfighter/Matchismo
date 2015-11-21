@@ -21,7 +21,9 @@
                 newCard.suit = suit;
                 newCard.rank = rank;
                 [self addCard: newCard];
+                
             }
+        
     }
     
     return self;

@@ -40,6 +40,7 @@
 
 -(Card*) drawRandomCard{
     Card* card = nil;
+    NSLog(@"%lu\n",(unsigned long)[self.cards count]);
     if ([self.cards count]) {
         unsigned int index = arc4random()% [self.cards count];
          card = self.cards[index];
