@@ -51,7 +51,6 @@
             [sender setBackgroundImage:[UIImage imageNamed:@"cardfront"]
                           forState:UIControlStateNormal];
             [sender setTitle:card.contents forState:UIControlStateNormal];
-            NSLog(@"%@", card.contents);
             self.count++;
 
         }
