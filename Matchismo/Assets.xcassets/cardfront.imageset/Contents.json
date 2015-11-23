@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "cardfront.jpg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "cardfront.jpg",
       "scale" : "2x"
     },
     {
